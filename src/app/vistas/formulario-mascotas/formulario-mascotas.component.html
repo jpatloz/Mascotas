@@ -1,1 +1,21 @@
-<p>formulario-mascotas works!</p>
+<form [formGroup]="mascotasForm" (ngSubmit)="onSubmit()">
+
+  <label for="nombre"> Nombre: </label>
+  <input id="nombre" type="text" formControlName="nombre">
+  <br/>
+
+  <label for="sexo"> Sexo: </label>
+  <textarea id="sexo" type="text" formControlName="sexo"></textarea>
+  <br/>
+
+  <label for="edad"> Año: </label>
+  <input id="edad" type="number" formControlName="edad">
+  <br/>
+
+  <label for="raza"> Precio: </label>
+  <input id="raza" type="text" formControlName="raza">
+  <br/>
+
+  <button type="submit" [disabled]="mascotasForm.invalid" >Submit</button>
+
+</form>
